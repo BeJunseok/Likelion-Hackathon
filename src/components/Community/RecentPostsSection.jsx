@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import RecentPostItem from './RecentPostItem';
 import FilterButtons from './FilterButton';
-import Star from '@/assets/svg/community/Star.svg?react';
+import Star from '@/assets/svg/community/star.svg?react';
 
 const RecentPostsSection = ({ recentPosts }) => {
   const posts = Array.isArray(recentPosts) ? recentPosts : [];
