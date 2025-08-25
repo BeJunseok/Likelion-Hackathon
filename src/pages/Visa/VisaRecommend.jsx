@@ -99,7 +99,7 @@ export default function VisaRecommend({ userName = 'Anna', onHome }) {
 
         // 2) 정적 import 폴백
         const viaImport = isMatch
-          ? await tryStaticImports([() => import('../../data/CommonUser.json')])
+          ? await tryStaticImports([() => import('../../data/commonUser.json')])
           : await tryStaticImports([() => import('../../data/visaUser.json')]);
 
         if (viaImport && !cancelled) {
@@ -110,7 +110,7 @@ export default function VisaRecommend({ userName = 'Anna', onHome }) {
         // 3) 실패 경고
         console.warn(
           isMatch
-            ? '추천 데이터 로드 실패: CommonUser.json을 찾을 수 없습니다.'
+            ? '추천 데이터 로드 실패: commonUser.json을 찾을 수 없습니다.'
             : '추천 데이터 로드 실패: visaUser.json을 찾을 수 없습니다.'
         );
       } finally {
