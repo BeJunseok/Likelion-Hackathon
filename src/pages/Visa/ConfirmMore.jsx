@@ -1,7 +1,7 @@
 // src/pages/Visa/ConfirmMore.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import commonUser from '@/data/CommonUser.json'; // ✅ 추가
+import commonUser from '@/data/commonUser.json'; // ✅ 추가
 
 export default function ConfirmMore() {
   const navigate = useNavigate();
