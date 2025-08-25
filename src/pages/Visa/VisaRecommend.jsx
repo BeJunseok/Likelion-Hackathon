@@ -84,9 +84,9 @@ export default function VisaRecommend({ userName = 'Anna', onHome }) {
         // 1) 퍼블릭 경로 먼저 (대/소문자 모두 시도)
         const publicPaths = isMatch
           ? [
-              '/data/CommonUser.json',
               '/data/commonUser.json',
-              '/CommonUser.json',
+              '/data/commonUser.json',
+              '/commonUser.json',
               '/commonUser.json',
             ]
           : ['/data/visaUser.json', '/visaUser.json'];
