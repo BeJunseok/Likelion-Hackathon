@@ -34,7 +34,9 @@ async function tryFetchPaths(paths) {
       const json = await res.json();
       const mapped = toCards(json);
       if (mapped.length) return mapped;
-    } catch (_) {}
+    } catch (_) {
+      console.log('');
+    }
   }
   return null;
 }
@@ -47,7 +49,9 @@ async function tryStaticImports(importCandidates) {
       const data = mod?.default ?? mod;
       const mapped = toCards(data);
       if (mapped.length) return mapped;
-    } catch (_) {}
+    } catch (_) {
+      console.log('');
+    }
   }
   return null;
 }
