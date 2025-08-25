@@ -1,5 +1,5 @@
 import { useAdditionalInfoData } from '@/hooks/useAdditionalInfoData';
-import MyPageHeader from '@/components/community/MyPage/MyPageHeader';
+import MyPageHeader from '@/components/Community/MyPage/MyPageHeader';
 // 공통 섹션들
 import {
   BusinessTypeSection,
