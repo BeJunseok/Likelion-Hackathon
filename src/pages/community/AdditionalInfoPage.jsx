@@ -11,7 +11,7 @@ import {
 import {
   VisaSection,
   BusinessInfoSection,
-} from '@/components/community/MyPage/AdditionalInfo/AdditionalInfoSections';
+} from '@/components/Community/MyPage/AdditionalInfo/AdditionalInfoSections';
 
 const AdditionalInfoPage = () => {
   const { formData, loading, handleFieldChange, handleSave } =
