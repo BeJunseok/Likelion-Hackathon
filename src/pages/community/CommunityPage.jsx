@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import mockData from '@/mock/Community.json';
+import mockData from '@/mock/community.json';
 import Header from '@/components/Community/Header';
 import NewsSection from '@/components/Community/NewsSection';
 import HotPostsSection from '@/components/Community/HotPostsSection';
@@ -75,10 +75,6 @@ const CommunityPage = () => {
       } catch (error) {
         console.error('게시글 조회 실패:', error);
         setError('게시글을 불러오는 중 오류가 발생했습니다.');
-
-        // 오류 발생 시 목데이터 사용
-        setHotPosts(mockData.hotPosts);
-        setRecentPosts(mockData.recentPosts);
       } finally {
         setLoading(false);
       }
