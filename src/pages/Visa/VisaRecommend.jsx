@@ -1,23 +1,22 @@
 // src/pages/Visa/VisaRecommend.jsx
-import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import HomeIcon from "../../assets/home.svg";
-import CardList from "../../components/CardList";
-import VisaMore from "./VisaMore";
+import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import HomeIcon from '@/assets/Home.svg';
+import CardList from '../../components/CardList';
+import VisaMore from './VisaMore';
 
 /** 배열 보정 유틸 */
 const A = (v) => (Array.isArray(v) ? v : v ? [v] : []);
 
 /** JSON → CardList 아이템 매핑 (공통 스키마) */
 function toCards(json) {
-  const recs =
-    json?.response?.recommendedVisas ??
-    json?.recommendedVisas ??
-    [];
+  const recs = json?.response?.recommendedVisas ?? json?.recommendedVisas ?? [];
   return recs.map((v, idx) => ({
-    code: v?.name ?? "",
-    highlight: idx === 0 ? "가장 유력한 후보!" : undefined,
-    reasons: [v?.reason, v?.purpose, v?.target, v?.qualification].filter(Boolean),
+    code: v?.name ?? '',
+    highlight: idx === 0 ? '가장 유력한 후보!' : undefined,
+    reasons: [v?.reason, v?.purpose, v?.target, v?.qualification].filter(
+      Boolean
+    ),
     warnings: A(v?.cautions),
     benefits: A(v?.benefits),
     requiredDocuments: A(v?.requiredDocuments),
@@ -30,7 +29,7 @@ function toCards(json) {
 async function tryFetchPaths(paths) {
   for (const path of paths) {
     try {
-      const res = await fetch(path, { method: "GET" });
+      const res = await fetch(path, { method: 'GET' });
       if (!res.ok) continue;
       const json = await res.json();
       const mapped = toCards(json);
@@ -53,7 +52,7 @@ async function tryStaticImports(importCandidates) {
   return null;
 }
 
-export default function VisaRecommend({ userName = "Anna", onHome }) {
+export default function VisaRecommend({ userName = 'Anna', onHome }) {
   const nav = useNavigate();
   const { state } = useLocation(); // { from?: "issued" | "match", raw?: any }
   const from = state?.from;
@@ -76,20 +75,17 @@ export default function VisaRecommend({ userName = "Anna", onHome }) {
         }
 
         // 분기에 따라 소스 선택
-        const isMatch = from === "match";
+        const isMatch = from === 'match';
 
         // 1) 퍼블릭 경로 먼저 (대/소문자 모두 시도)
         const publicPaths = isMatch
           ? [
-              "/data/CommonUser.json",
-              "/data/commonUser.json",
-              "/CommonUser.json",
-              "/commonUser.json",
+              '/data/CommonUser.json',
+              '/data/commonUser.json',
+              '/CommonUser.json',
+              '/commonUser.json',
             ]
-          : [
-              "/data/visaUser.json",
-              "/visaUser.json",
-            ];
+          : ['/data/visaUser.json', '/visaUser.json'];
 
         const viaFetch = await tryFetchPaths(publicPaths);
         if (viaFetch && !cancelled) {
@@ -99,12 +95,8 @@ export default function VisaRecommend({ userName = "Anna", onHome }) {
 
         // 2) 정적 import 폴백
         const viaImport = isMatch
-          ? await tryStaticImports([
-              () => import("../../data/CommonUser.json"),
-            ])
-          : await tryStaticImports([
-              () => import("../../data/visaUser.json"),
-            ]);
+          ? await tryStaticImports([() => import('../../data/CommonUser.json')])
+          : await tryStaticImports([() => import('../../data/visaUser.json')]);
 
         if (viaImport && !cancelled) {
           setItems(viaImport);
@@ -114,8 +106,8 @@ export default function VisaRecommend({ userName = "Anna", onHome }) {
         // 3) 실패 경고
         console.warn(
           isMatch
-            ? "추천 데이터 로드 실패: CommonUser.json을 찾을 수 없습니다."
-            : "추천 데이터 로드 실패: visaUser.json을 찾을 수 없습니다."
+            ? '추천 데이터 로드 실패: CommonUser.json을 찾을 수 없습니다.'
+            : '추천 데이터 로드 실패: visaUser.json을 찾을 수 없습니다.'
         );
       } finally {
         if (!cancelled) setLoading(false);
@@ -141,7 +133,7 @@ export default function VisaRecommend({ userName = "Anna", onHome }) {
         {/* 좌상단 홈 아이콘 */}
         <button
           type="button"
-          onClick={onHome ?? (() => nav("/visa-history", {state: {from}}))}
+          onClick={onHome ?? (() => nav('/visa-history', { state: { from } }))}
           className="absolute left-6 top-6 active:scale-[0.98]"
           aria-label="홈으로"
         >
@@ -157,7 +149,7 @@ export default function VisaRecommend({ userName = "Anna", onHome }) {
 
         {/* 카드 리스트 */}
         <div className="mt-16">
-          <CardList items={items} from={state?.from ?? "history"}/>
+          <CardList items={items} from={state?.from ?? 'history'} />
         </div>
 
         <div className="mt-12">
