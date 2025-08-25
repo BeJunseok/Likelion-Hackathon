@@ -1,0 +1,122 @@
+{
+  "post": [
+    {
+      "id": 1,
+      "category": "Q&A",
+      "title": "의류 도매 쪽 잘 아시는 분 있나요?",
+      "content": "안녕하세요. 예비 창업자입니다.\n제가 의류 도매 쪽을 준비중인데, 유통업체와 분쟁이 생겨서요.\n법률을 잘 아시는 분들 댓글 달아주세요ㅠㅜ",
+      "author": {
+        "name": "Anna",
+        "profileImage": "/api/placeholder/60/60"
+      },
+      "createdAt": "2024-08-16T14:35:00.000Z",
+      "views": 260,
+      "commentCount": 2,
+      "likeCount": 3,
+      "comments": [
+        {
+          "id": 1,
+          "author": {
+            "name": "Selly Kim",
+            "profileImage": "/api/placeholder/40/40"
+          },
+          "content": "Welcome! weekday foot traffic은 평일 유동인구, weekend foot traffic은 주말 유동인구에요! 입지 분석할 때 굉장히 중요한 요소입니다!",
+          "createdAt": "2024-08-16T17:07:00.000Z"
+        },
+        {
+          "id": 2,
+          "author": {
+            "name": "Logan Yu",
+            "profileImage": "/api/placeholder/40/40"
+          },
+          "content": "저도 예전에 비슷한 문제 겪었어요. 법률 상담사에게 바로 문의하는 게 제일 빠릅니다!",
+          "createdAt": "2024-08-17T11:07:20.000Z"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Q&A",
+      "title": "My D-8 visa is expiring soon. Any tips for renewal?",
+      "content": "Hey everyone, my D-8 business visa will expire in two months.\nI heard the process changed this year? Do I need to re-submit my entire business plan? Any tips would be appreciated!",
+      "author": {
+        "name": "Logan Yu",
+        "profileImage": "/api/placeholder/60/60"
+      },
+      "createdAt": "2024-08-15T12:20:00.000Z",
+      "views": 340,
+      "commentCount": 1,
+      "likeCount": 5,
+      "comments": [
+        {
+          "id": 1,
+          "author": {
+            "name": "Anna",
+            "profileImage": "/api/placeholder/40/40"
+          },
+          "content": "마포구는 최근 1년간 주말 유동인구가 꾸준히 늘고 있어요! 외식업에는 괜찮을 것 같습니다.",
+          "createdAt": "2024-08-15T13:01:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Discussion",
+      "title": "홍대 bakery location 괜찮을까요?",
+      "content": "I'm planning to open a European-style bakery near Hongdae Station.\n근데 rent가 조금 비싸네요…\n혹시 홍대에서 business 하시는 분, weekday랑 weekend foot traffic이 어떤지 알려주실 수 있나요?",
+      "author": {
+        "name": "Selly Kim",
+        "profileImage": "/api/placeholder/60/60"
+      },
+      "createdAt": "2024-08-14T18:45:00.000Z",
+      "views": 410,
+      "commentCount": 2,
+      "likeCount": 7,
+      "comments": [
+        {
+          "id": 1,
+          "author": {
+            "name": "Logan Yu",
+            "profileImage": "/api/placeholder/40/40"
+          },
+          "content": "저희 매장은 인스타그램 광고로 신규 고객이 꽤 늘었어요!",
+          "createdAt": "2024-08-14T19:10:00.000Z"
+        },
+        {
+          "id": 2,
+          "author": {
+            "name": "Anna",
+            "profileImage": "/api/placeholder/40/40"
+          },
+          "content": "효과는 확실히 있는데, 꾸준히 콘텐츠 올려야 합니다!",
+          "createdAt": "2024-08-14T19:30:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Help",
+      "title": "외국인 비자 연장 관련",
+      "content": "제가 한국에서의 비자 연장이 처음인데, 완전히 모르겠어서요, 😅\n중국어를 할 줄 아는 상담사가 서울에 있나요?\n요식업쪽이였으면 좋겠어요.",
+      "author": {
+        "name": "David Lee",
+        "profileImage": "/api/placeholder/60/60"
+      },
+      "createdAt": "2024-08-13T09:15:00.000Z",
+      "views": 190,
+      "commentCount": 1,
+      "likeCount": 2,
+      "comments": [
+        {
+          "id": 1,
+          "author": {
+            "name": "Selly Kim",
+            "profileImage": "/api/placeholder/40/40"
+          },
+          "content": "최근엔 신용등급 기준이 조금 완화됐습니다. 정부 사이트 확인해보시면 돼요!",
+          "createdAt": "2024-08-13T10:05:00.000Z"
+        }
+      ]
+    }
+  ]
+}
